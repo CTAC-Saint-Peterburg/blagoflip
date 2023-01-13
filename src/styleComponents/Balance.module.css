@@ -1,0 +1,21 @@
+.main {
+  padding: 10px;
+  height: 100px;
+  width: 250px;
+  background-color: #818da3;
+  border-radius: 12px;
+}
+h3 {
+  margin: 0 0 0 0;
+}
+h2 {
+  text-align: left;
+  margin: 0 0 0 0;
+  font-size: 32px;
+  color: #fcffa8;
+}
+.buttonblock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
