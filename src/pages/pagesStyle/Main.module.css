@@ -17,3 +17,12 @@
   padding: 10px;
   height: 200px;
 }
+.second {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  height: 200px;
+}
