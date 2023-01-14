@@ -1,7 +1,32 @@
 .main {
   padding: 10px;
-  height: 100px;
-  width: 100px;
-  background-color: rgb(163, 153, 153);
+  height: 180px;
+  width: 180px;
+  background-color: #2d2828;
   border-radius: 12px;
+}
+.imgwrapper {
+  margin: 0 0 0 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.imgProfile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.h3Profile {
+  margin: 0 0 0 0;
+  color: aliceblue;
+}
+.h2Profile {
+  text-align: left;
+  margin: 0 0 0 0;
+  font-size: 24px;
+  color: #fcffa8;
+}
+.h4Winrate {
+  margin: 10px 0 0 0;
+  color: #386857;
 }
