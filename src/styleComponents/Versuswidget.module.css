@@ -1,0 +1,28 @@
+.main {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.main h3 {
+  margin: 0 0 0 0;
+  text-align: center;
+  color: #fcffa8;
+}
+.userImg {
+  margin: 0 0 0 0;
+  display: grid;
+  justify-items: center;
+}
+.userImg > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.userImg > h5 {
+  margin: 0 0 0 0;
+  text-align: center;
+  text-align: center;
+  color: #fcffa8;
+}

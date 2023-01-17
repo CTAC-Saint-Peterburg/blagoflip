@@ -1,0 +1,15 @@
+.main {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  align-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: aliceblue;
+}
+.main h1 {
+  margin: 0 0 0 0;
+  text-align: center;
+  font-size: 14px;
+}
