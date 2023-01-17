@@ -1,0 +1,16 @@
+.main {
+  margin: 0 auto;
+  margin-bottom: 5px;
+  display: grid;
+  justify-items: center;
+  width: 80%;
+}
+.main > input {
+  background-color: black;
+  height: 20px;
+  width: 50%;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #fcffa8;
+  border-radius: 5px;
+}

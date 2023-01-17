@@ -2,7 +2,6 @@
   position: relative;
   margin: 0 auto;
   margin-top: 20px;
-  height: 600px;
   width: 100%;
   background-color: black;
   border-radius: 12px;
@@ -17,7 +16,7 @@
   padding: 10px;
   height: 200px;
 }
-.second {
+.block {
   position: relative;
   display: grid;
   gap: 10px;
