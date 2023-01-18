@@ -1,4 +1,5 @@
 import Balance from "../components/Balance";
+import { CreateFlip } from "../components/CreateFliip";
 import Flips from "../components/Flips";
 import { History } from "../components/History";
 import Profile from "../components/Profile";
@@ -15,6 +16,9 @@ export default function Main() {
       </div>
       <div className={styles.block}>
         <Flips />
+      </div>
+      <div className={styles.block}>
+        <CreateFlip />
       </div>
     </div>
   );

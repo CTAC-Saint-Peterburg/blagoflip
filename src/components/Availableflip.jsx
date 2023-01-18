@@ -5,6 +5,7 @@ export default function Availableflip() {
     <div className={styles.main}>
       <img src={avatar} alt="avatar" />
       <h4>username</h4>
+      <h5>40$</h5>
       <button>flip</button>
     </div>
   );

@@ -11,14 +11,9 @@
   align-items: center;
   background-color: #fcffa8;
   border-radius: 9px 0px 10px 0px;
-  width: 55px;
+  width: 100px;
   height: 25px;
 }
 .title > span {
   font-size: 14px;
-}
-.scroll {
-  width: 100%;
-  overflow-x: scroll;
-  display: inline-flex;
 }

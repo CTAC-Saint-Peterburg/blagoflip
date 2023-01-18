@@ -1,0 +1,29 @@
+.main {
+  margin: 0 auto;
+  width: 300px;
+  height: 160px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #fcffa8;
+  border-radius: 12px;
+}
+.value {
+  margin: 0 0 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fcffa8;
+}
+.value > span {
+  margin: 0 0 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(59, 234, 106);
+}
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  height: 20px;
+  justify-content: center;
+  gap: 4px;
+}
