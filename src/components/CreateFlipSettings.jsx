@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { add } from "../store/availableflips/availableflipsSlice";
 import styles from "../styleComponents/CreateFlipSettings.module.css";
 export default function CreateFlipSettings() {
+  const dispatch = useDispatch();
   const [value, setValue] = useState(0);
   const [buttons, setButtons] = useState([10, 50, 100, 500, 1000]);
   return (
@@ -17,7 +20,13 @@ export default function CreateFlipSettings() {
           );
         })}
       </div>
-      <button>submit</button>
+      <button
+        onClick={() => {
+          dispatch(add({ name: "mario", value: value }));
+        }}
+      >
+        submit
+      </button>
     </div>
   );
 }
