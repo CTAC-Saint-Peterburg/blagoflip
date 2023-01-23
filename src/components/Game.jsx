@@ -1,4 +1,5 @@
 import styles from "../styleComponents/Game.module.css";
+import { Coin } from "./Coin";
 import Versuswidget from "./Versuswidget";
 export const Game = () => {
   return (
@@ -7,9 +8,12 @@ export const Game = () => {
         <div className={styles.exit}>
           <button>exit</button>
         </div>
-        <div>coin 0</div>
+        <div className={styles.timer}>
+          <span>1:33</span>
+        </div>
+        <Coin />
 
-        <div>oponents</div>
+        {/* <div>Results</div> */}
       </div>
     </div>
   );
