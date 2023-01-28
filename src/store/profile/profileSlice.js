@@ -3,7 +3,12 @@ export const profileSlice = createSlice({
   name: "profile",
   initialState: {
     data: { name: "Unnamed", id: "1", winrate: 33 },
-    history: [1, 2, 3, 4],
+    history: [
+      { id: 9, opponent: "kek", bet: 100 },
+      { id: 13, opponent: "GigaHru", bet: 50 },
+      { id: 18, opponent: "Sam", bet: 10 },
+      { id: 132, opponent: "Rodjer", bet: 500 },
+    ],
   },
   reducers: {},
 });

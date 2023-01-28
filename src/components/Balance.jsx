@@ -12,7 +12,10 @@ export default function Balance() {
       <div className={styles.buttonblock}>
         <button
           onClick={() => {
-            dispatch(decrement(Number(prompt())));
+            const value = Number(prompt());
+            if (value <= balanceValue) {
+              dispatch(decrement(value));
+            } else alert("incorrect value");
           }}
         >
           снять

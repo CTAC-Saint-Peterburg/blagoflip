@@ -10,7 +10,7 @@ export const History = () => {
       </div>
       <div className={styles.games}>
         {historyData.map((x, index) => (
-          <Historygames key={index} />
+          <Historygames key={x.id} opponent={x.opponent} bet={x.bet} />
         ))}
       </div>
     </div>

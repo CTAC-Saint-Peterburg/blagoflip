@@ -5,10 +5,13 @@ import { Game } from "../components/Game";
 import { History } from "../components/History";
 import Profile from "../components/Profile";
 import styles from "./pagesStyle/Main.module.css";
+import { useSelector } from "react-redux";
 export default function Main() {
+  const visible = useSelector((state) => state.game.data.visibility);
+  console.log(visible);
   return (
     <div className={styles.main}>
-      {/* <Game /> */}
+      {visible ? <Game /> : ""}
       <div className={styles.first}>
         <Balance />
         <Profile />

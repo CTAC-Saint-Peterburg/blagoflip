@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../store/availableflips/availableflipsSlice";
+import { decrement } from "../store/balance/balanceSlice";
 import styles from "../styleComponents/CreateFlipSettings.module.css";
 export default function CreateFlipSettings() {
   const dispatch = useDispatch();
+  const balance = useSelector((state) => state.balance.value);
   const profileValues = useSelector((state) => state.profile.data);
   const [value, setValue] = useState(0);
   const [buttons, setButtons] = useState([10, 50, 100, 500, 1000]);
@@ -23,7 +25,10 @@ export default function CreateFlipSettings() {
       </div>
       <button
         onClick={() => {
-          dispatch(add({ name: `${profileValues.name}`, value: value }));
+          if (balance >= value) {
+            dispatch(add({ name: `${profileValues.name}`, value: value }));
+            dispatch(decrement(value));
+          } else alert("not enough money");
         }}
       >
         submit
