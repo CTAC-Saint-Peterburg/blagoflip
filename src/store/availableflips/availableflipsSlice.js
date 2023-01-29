@@ -9,12 +9,16 @@ export const availableflipsSlice = createSlice({
       { id: 33, name: "heh", value: 100 },
       { id: 66, name: "mem", value: 500 },
     ],
+    searchValue: "",
   },
   reducers: {
     add: (state, action) => {
       state.data.push(action.payload);
     },
+    setSearch: (state, action) => {
+      state.searchValue = action.payload;
+    },
   },
 });
-export const { add } = availableflipsSlice.actions;
+export const { add, setSearch } = availableflipsSlice.actions;
 export default availableflipsSlice.reducer;

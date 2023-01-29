@@ -6,6 +6,14 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function Flips() {
   const datafromSlice = useSelector((state) => state.availableflips.data);
+  const datafromSearch = useSelector(
+    (state) => state.availableflips.searchValue
+  );
+  const cards = datafromSlice.filter(
+    (x) =>
+      x.name.toLowerCase().includes(datafromSearch.toLowerCase()) ||
+      String(x.value).includes(datafromSearch)
+  );
   return (
     <div className={styles.main}>
       <div className={styles.title}>
@@ -13,7 +21,7 @@ export default function Flips() {
       </div>
       <FlipsSearch />
       <div className={styles.scroll}>
-        {datafromSlice.map((x, index) => {
+        {cards.map((x, index) => {
           return (
             <Availableflip key={x.id} name={x.name} value={x.value} id={x.id} />
           );
