@@ -3,11 +3,11 @@ export const availableflipsSlice = createSlice({
   name: "availableflips",
   initialState: {
     data: [
-      { name: "stas", value: 50 },
-      { name: "kek", value: 50 },
-      { name: "kok", value: 10 },
-      { name: "heh", value: 100 },
-      { name: "mem", value: 500 },
+      { id: 11, name: "stas", value: 50 },
+      { id: 18, name: "kek", value: 50 },
+      { id: 28, name: "kok", value: 10 },
+      { id: 33, name: "heh", value: 100 },
+      { id: 66, name: "mem", value: 500 },
     ],
   },
   reducers: {

@@ -14,7 +14,9 @@ export default function Flips() {
       <FlipsSearch />
       <div className={styles.scroll}>
         {datafromSlice.map((x, index) => {
-          return <Availableflip key={index} name={x.name} value={x.value} />;
+          return (
+            <Availableflip key={x.id} name={x.name} value={x.value} id={x.id} />
+          );
         })}
       </div>
     </div>

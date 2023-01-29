@@ -26,7 +26,13 @@ export default function CreateFlipSettings() {
       <button
         onClick={() => {
           if (balance >= value) {
-            dispatch(add({ name: `${profileValues.name}`, value: value }));
+            dispatch(
+              add({
+                id: Math.floor(Math.random() * 9999),
+                name: `${profileValues.name}`,
+                value: value,
+              })
+            );
             dispatch(decrement(value));
           } else alert("not enough money");
         }}

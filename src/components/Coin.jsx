@@ -2,7 +2,10 @@ import { useState } from "react";
 import styles from "../styleComponents/Coin.module.css";
 import avatarOne from "../images/avatar.png";
 import avatarTwo from "../images/user2.jpg";
-export const Coin = () => {
+import { useSelector } from "react-redux";
+
+export const Coin = ({ data }) => {
+  const yourProfile = useSelector((state) => state.profile.data.name);
   const [value, setValue] = useState(0);
   const rotate = {
     transition: "3s",
@@ -12,7 +15,7 @@ export const Coin = () => {
     <div className={styles.main}>
       <div className={styles.userImg}>
         <img src={avatarOne} alt="userlogo" />
-        <h5>username</h5>
+        <h5>{yourProfile}</h5>
       </div>
       <div>
         <div
@@ -32,7 +35,7 @@ export const Coin = () => {
       </div>
       <div className={styles.userImg}>
         <img src={avatarTwo} alt="userlogo" />
-        <h5>opponent</h5>
+        <h5>{data.name}</h5>
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
 import styles from "../styleComponents/Game.module.css";
 import { Coin } from "./Coin";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { change } from "../store/game/gameSlice";
 
 export const Game = () => {
+  const data = useSelector((state) => state.game.data.receivedData);
   const dispatch = useDispatch();
   return (
     <div className={styles.main}>
@@ -14,7 +15,10 @@ export const Game = () => {
         <div className={styles.timer}>
           <span>1:33</span>
         </div>
-        <Coin />
+        <Coin data={data} />
+        <div className={styles.bet}>
+          <h3>{data.value}💰</h3>
+        </div>
 
         {/* <div>Results</div> */}
       </div>

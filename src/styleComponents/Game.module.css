@@ -45,3 +45,11 @@
   text-align: center;
   font-size: 18px;
 }
+.bet {
+  position: relative;
+}
+.bet > h3 {
+  margin: 10px 0px 10px -2px;
+  text-align: center;
+  color: aliceblue;
+}
