@@ -10,6 +10,11 @@ export const profileSlice = createSlice({
       { id: 132, opponent: "Rodjer", bet: 500 },
     ],
   },
-  reducers: {},
+  reducers: {
+    addToHistory: (state, action) => {
+      state.history.push(action.payload);
+    },
+  },
 });
+export const { addToHistory } = profileSlice.actions;
 export default profileSlice.reducer;

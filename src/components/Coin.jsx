@@ -4,6 +4,7 @@ import avatarOne from "../images/avatar.png";
 import avatarTwo from "../images/user2.jpg";
 import { useSelector, useDispatch } from "react-redux";
 import { setWheelSpin } from "../store/game/gameSlice";
+import { addToHistory } from "../store/profile/profileSlice";
 
 export const Coin = ({ data }) => {
   const yourProfile = useSelector((state) => state.profile.data.name);
@@ -16,9 +17,20 @@ export const Coin = ({ data }) => {
   };
   useEffect(() => {
     if (wheelSpin) {
-      if (value >= 1080) {
-        setValue(0);
-      } else setValue(1080);
+      const randomWinner = Math.floor(Math.random() * 2);
+      if (randomWinner === 0) {
+        setValue(1260);
+
+        dispatch(
+          addToHistory({ id: data.id, opponent: data.name, bet: data.value })
+        );
+      } else if (randomWinner === 1) {
+        setValue(1080);
+
+        dispatch(
+          addToHistory({ id: data.id, opponent: data.name, bet: data.value })
+        );
+      }
       dispatch(setWheelSpin());
     }
   }, [wheelSpin]);
