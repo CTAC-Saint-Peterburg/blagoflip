@@ -6,7 +6,7 @@ export const profileSlice = createSlice({
     history: [
       { id: 9, opponent: "kek", bet: 100 },
       { id: 13, opponent: "GigaHru", bet: 50 },
-      { id: 18, opponent: "Sam", bet: 10 },
+      { id: 88, opponent: "Sam", bet: 10 },
       { id: 132, opponent: "Rodjer", bet: 500 },
     ],
   },

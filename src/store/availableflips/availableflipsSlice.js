@@ -15,10 +15,13 @@ export const availableflipsSlice = createSlice({
     add: (state, action) => {
       state.data.push(action.payload);
     },
+    deleteFlip: (state, action) => {
+      state.data = state.data.filter((x) => x.id !== action.payload.id);
+    },
     setSearch: (state, action) => {
       state.searchValue = action.payload;
     },
   },
 });
-export const { add, setSearch } = availableflipsSlice.actions;
+export const { add, setSearch, deleteFlip } = availableflipsSlice.actions;
 export default availableflipsSlice.reducer;
