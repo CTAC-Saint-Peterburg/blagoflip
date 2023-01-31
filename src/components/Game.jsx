@@ -2,6 +2,7 @@ import styles from "../styleComponents/Game.module.css";
 import { Coin } from "./Coin";
 import { useDispatch, useSelector } from "react-redux";
 import { change } from "../store/game/gameSlice";
+import { Timer } from "./Timer";
 
 export const Game = () => {
   const data = useSelector((state) => state.game.data.receivedData);
@@ -13,7 +14,7 @@ export const Game = () => {
           <button onClick={() => dispatch(change())}>exit</button>
         </div>
         <div className={styles.timer}>
-          <span>1:33</span>
+          <Timer value={10} />
         </div>
         <Coin data={data} />
         <div className={styles.bet}>

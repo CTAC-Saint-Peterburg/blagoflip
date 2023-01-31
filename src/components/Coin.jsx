@@ -1,16 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styleComponents/Coin.module.css";
 import avatarOne from "../images/avatar.png";
 import avatarTwo from "../images/user2.jpg";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setWheelSpin } from "../store/game/gameSlice";
 
 export const Coin = ({ data }) => {
   const yourProfile = useSelector((state) => state.profile.data.name);
+  const wheelSpin = useSelector((state) => state.game.data.wheelSpin);
+  const dispatch = useDispatch();
   const [value, setValue] = useState(0);
   const rotate = {
     transition: "3s",
     transform: `rotate(${value}deg)`,
   };
+  useEffect(() => {
+    if (wheelSpin) {
+      if (value >= 1080) {
+        setValue(0);
+      } else setValue(1080);
+      dispatch(setWheelSpin());
+    }
+  }, [wheelSpin]);
   return (
     <div className={styles.main}>
       <div className={styles.userImg}>
@@ -18,14 +29,7 @@ export const Coin = ({ data }) => {
         <h5>{yourProfile}</h5>
       </div>
       <div>
-        <div
-          className={styles.coin}
-          onClick={() => {
-            if (value >= 1080) {
-              setValue(0);
-            } else setValue(1080);
-          }}
-        >
+        <div className={styles.coin} onClick={() => {}}>
           <div className={styles.innerCoin} style={rotate}>
             <div className={styles.loser}>loser</div>
             <div className={styles.middle}></div>

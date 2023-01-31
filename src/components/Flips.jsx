@@ -1,8 +1,7 @@
-import { useState } from "react";
 import styles from "../styleComponents/Flips.module.css";
 import Availableflip from "./Availableflip";
 import { FlipsSearch } from "./FlipsSearch";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function Flips() {
   const datafromSlice = useSelector((state) => state.availableflips.data);
