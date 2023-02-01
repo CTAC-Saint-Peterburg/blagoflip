@@ -5,6 +5,7 @@ import avatarTwo from "../images/user2.jpg";
 import { useSelector, useDispatch } from "react-redux";
 import { setWheelSpin } from "../store/game/gameSlice";
 import { addToHistory } from "../store/profile/profileSlice";
+import { increment, decrement } from "../store/balance/balanceSlice";
 
 export const Coin = ({ data }) => {
   const yourProfile = useSelector((state) => state.profile.data.name);
@@ -20,13 +21,13 @@ export const Coin = ({ data }) => {
       const randomWinner = Math.floor(Math.random() * 2);
       if (randomWinner === 0) {
         setValue(1260);
-
+        dispatch(increment(data.value));
         dispatch(
           addToHistory({ id: data.id, opponent: data.name, bet: data.value })
         );
       } else if (randomWinner === 1) {
         setValue(1080);
-
+        dispatch(decrement(data.value));
         dispatch(
           addToHistory({ id: data.id, opponent: data.name, bet: data.value })
         );
