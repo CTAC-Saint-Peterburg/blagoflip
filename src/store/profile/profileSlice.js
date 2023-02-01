@@ -9,12 +9,19 @@ export const profileSlice = createSlice({
       { id: 88, opponent: "Sam", bet: 10 },
       { id: 132, opponent: "Rodjer", bet: 500 },
     ],
+    alert: { visibility: false, text: "undefined" },
   },
   reducers: {
     addToHistory: (state, action) => {
       state.history.push(action.payload);
     },
+    setVisibility: (state, action) => {
+      state.alert.visibility = action.payload;
+    },
+    setText: (state, action) => {
+      state.alert.text = action.payload;
+    },
   },
 });
-export const { addToHistory } = profileSlice.actions;
+export const { addToHistory, setVisibility, setText } = profileSlice.actions;
 export default profileSlice.reducer;

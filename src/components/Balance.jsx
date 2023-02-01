@@ -1,9 +1,11 @@
 import styles from "../styleComponents/Balance.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../store/balance/balanceSlice";
+import { setVisibility, setText } from "../store/profile/profileSlice";
 
 export default function Balance() {
   const balanceValue = useSelector((state) => state.balance.value);
+  const alertStatus = useSelector((state) => state.profile.alert.visibility);
   const dispatch = useDispatch();
   return (
     <div className={styles.main}>
@@ -15,7 +17,10 @@ export default function Balance() {
             const value = Number(prompt());
             if (value <= balanceValue) {
               dispatch(decrement(value));
-            } else alert("incorrect value");
+            } else if (!alertStatus) {
+              dispatch(setVisibility(true));
+              dispatch(setText("incorrect value"));
+            }
           }}
         >
           снять
