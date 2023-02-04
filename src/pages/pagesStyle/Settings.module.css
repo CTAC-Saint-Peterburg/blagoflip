@@ -8,3 +8,10 @@
   background-color: black;
   border-radius: 12px;
 }
+.logout {
+  position: relative;
+  display: grid;
+  margin: 0 auto;
+  margin-top: 12px;
+  width: 200px;
+}
