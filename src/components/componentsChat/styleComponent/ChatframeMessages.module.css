@@ -1,0 +1,30 @@
+.main {
+  position: relative;
+  width: 100%;
+}
+.incomingMessages {
+  position: relative;
+  margin: 10px 0px 10px 0px;
+  float: left;
+  width: 100%;
+}
+.incomingMessages > span {
+  margin-left: 10px;
+  padding: 6px;
+  float: left;
+  border-radius: 12px;
+  background-color: #fcffa8;
+}
+.myMessages {
+  position: relative;
+  margin: 10px 0px 10px 0px;
+  float: right;
+  width: 100%;
+}
+.myMessages > span {
+  margin-right: 10px;
+  padding: 6px;
+  float: right;
+  border-radius: 12px;
+  background-color: #55b1db;
+}
