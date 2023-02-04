@@ -1,0 +1,17 @@
+.main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.changeProfileWrapper {
+  border-radius: 12px;
+  background-color: #2d2828;
+}
+.headers2 {
+  margin: 0 0 0 0;
+  padding: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fcffa8;
+}

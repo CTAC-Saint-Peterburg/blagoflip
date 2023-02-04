@@ -1,12 +1,12 @@
+import { useSelector } from "react-redux";
+import Alerts from "../components/Alerts";
 import Balance from "../components/Balance";
 import { CreateFlip } from "../components/CreateFliip";
 import Flips from "../components/Flips";
 import { Game } from "../components/Game";
 import { History } from "../components/History";
-import Alerts from "../components/Alerts";
 import Profile from "../components/Profile";
 import styles from "./pagesStyle/Main.module.css";
-import { useSelector } from "react-redux";
 export default function Main() {
   const visibleGame = useSelector((state) => state.game.data.visibility);
   const visibleAlert = useSelector((state) => state.profile.alert.visibility);

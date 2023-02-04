@@ -21,7 +21,11 @@ export const profileSlice = createSlice({
     setText: (state, action) => {
       state.alert.text = action.payload;
     },
+    setNewName: (state, action) => {
+      state.data.name = action.payload;
+    },
   },
 });
-export const { addToHistory, setVisibility, setText } = profileSlice.actions;
+export const { addToHistory, setVisibility, setText, setNewName } =
+  profileSlice.actions;
 export default profileSlice.reducer;
