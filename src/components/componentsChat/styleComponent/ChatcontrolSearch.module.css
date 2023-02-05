@@ -1,0 +1,66 @@
+.main {
+  position: relative;
+  padding: 5px;
+
+  background-color: rgb(0, 0, 0);
+}
+.wrapperSearch {
+  position: relative;
+
+  width: 100%;
+  height: 100px;
+  background-color: #2d2828;
+  border-radius: 12px;
+}
+.wrapperSearch > h2 {
+  margin: 0 0 0 0;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fcffa8;
+}
+.inputDiv {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  display: grid;
+  padding: 5px;
+  align-items: center;
+}
+.inputDiv > input {
+  text-decoration: none;
+  border: 1px solid #fcffa8;
+  border-radius: 12px;
+  background-color: black;
+  color: whitesmoke;
+}
+.resultWrapper {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+
+  border-top: 1px solid #fcffa8;
+}
+.resultWrapper > h4 {
+  margin: 0 0 0 0;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fcffa8;
+}
+.resultUnitsWrapper {
+  position: relative;
+  overflow-x: scroll;
+  display: inline-flex;
+
+  width: 100%;
+}
+.resultUnit {
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background-color: #fcffa8;
+}
