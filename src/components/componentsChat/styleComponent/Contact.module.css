@@ -1,0 +1,29 @@
+.main {
+  position: relative;
+  margin: 0 0 0 0;
+  margin-bottom: 5px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  height: 80px;
+  border: 1px solid #fcffa8;
+  border-radius: 12px;
+  background-color: black;
+}
+.lastMessage {
+  margin: 0 0 0 0;
+  font-size: 14px;
+  color: antiquewhite;
+}
+.header3 {
+  margin: 0 0 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fcffa8;
+}
+.imageContact {
+  margin: 0 0 0 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

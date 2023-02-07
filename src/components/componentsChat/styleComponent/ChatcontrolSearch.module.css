@@ -55,12 +55,29 @@
 
   width: 100%;
 }
+.imageContact {
+  margin: 0 0 0 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
 .resultUnit {
   position: relative;
   margin-right: 5px;
   margin-bottom: 5px;
-  min-width: 50px;
-  min-height: 50px;
-  border-radius: 50%;
-  background-color: #fcffa8;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  min-width: 80px;
+  min-height: 80px;
+  border: 1px solid #fcffa8;
+  border-radius: 12px;
+  gap: 2px;
+  justify-items: center;
+}
+.resultUnit > h2 {
+  position: relative;
+  margin: 0 0 0 0;
+  color: #fcffa8;
+  font-size: 12px;
 }
