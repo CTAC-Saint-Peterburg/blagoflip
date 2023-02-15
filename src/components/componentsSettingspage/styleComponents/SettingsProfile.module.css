@@ -5,6 +5,7 @@
   max-width: 600px;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  gap: 20px;
 }
 .changeProfileWrapper {
   border-radius: 12px;
