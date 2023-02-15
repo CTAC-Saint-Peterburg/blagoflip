@@ -1,7 +1,7 @@
 .main {
   margin: 0 auto;
-  width: 300px;
-  height: 160px;
+  width: 500px;
+  height: 300px;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -10,13 +10,13 @@
 }
 .value {
   margin: 0 0 0 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   color: #fcffa8;
 }
 .value > span {
   margin: 0 0 0 0;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   color: rgb(59, 234, 106);
 }

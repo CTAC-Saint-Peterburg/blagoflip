@@ -16,7 +16,8 @@
   justify-items: center;
   align-items: center;
   padding: 10px;
-  height: 200px;
+
+  min-height: 200px;
 }
 .block {
   position: relative;
@@ -25,5 +26,6 @@
   justify-items: center;
   align-items: center;
   padding: 10px;
-  height: 200px;
+  height: 40vh;
+  min-height: 200px;
 }

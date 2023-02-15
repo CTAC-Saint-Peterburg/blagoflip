@@ -1,7 +1,7 @@
 .main {
+  position: relative;
   width: 100%;
   height: 100%;
-
   border: 1px solid #fcffa8;
   border-radius: 12px;
 }
@@ -20,7 +20,6 @@
 .games {
   position: relative;
   margin: 0 auto;
-  width: 60%;
-  height: 180px;
+  max-height: 360px;
   overflow: auto;
 }

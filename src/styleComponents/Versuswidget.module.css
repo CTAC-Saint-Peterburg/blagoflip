@@ -1,13 +1,17 @@
 .main {
   position: relative;
+  height: 100%;
+  width: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
 }
 .main h3 {
   margin: 0 0 0 0;
   text-align: center;
+  font-size: 42px;
   color: #fcffa8;
 }
 .userImg {
@@ -16,13 +20,14 @@
   justify-items: center;
 }
 .userImg > img {
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
 }
 .userImg > h5 {
   margin: 0 0 0 0;
   text-align: center;
   text-align: center;
+  font-size: 24px;
   color: #fcffa8;
 }

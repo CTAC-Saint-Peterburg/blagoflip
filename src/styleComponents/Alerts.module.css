@@ -1,12 +1,12 @@
 .main {
   position: fixed;
-  padding: 12px;
+  padding: 24px;
   top: 20px;
   left: 50%;
   translate: -50%;
   background-color: tomato;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 32px;
   color: aliceblue;
   z-index: 1;
 }
