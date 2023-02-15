@@ -12,8 +12,11 @@
 }
 
 .contactsWrapper {
-  overflow-y: scroll;
   position: relative;
-  height: calc(80px * 3);
+  overflow-y: scroll;
+  display: grid;
+  width: 100%;
+  height: calc(80px * 5);
+  justify-items: center;
   background-color: black;
 }

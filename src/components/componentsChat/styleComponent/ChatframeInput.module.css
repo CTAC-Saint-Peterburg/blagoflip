@@ -1,10 +1,11 @@
 .main {
   position: absolute;
-  top: 70%;
+  top: 70vh;
   left: 50%;
   transform: translate(-50%);
   height: 10%;
   width: 70%;
+  max-width: 600px;
   display: grid;
   grid-template-columns: 80% 20%;
   align-items: center;
