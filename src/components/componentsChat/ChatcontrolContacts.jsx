@@ -1,17 +1,21 @@
 import { Contact } from "./Contact";
 import styles from "./styleComponent/ChatcontrolContacts.module.css";
-console.log(styles);
+import { useSelector } from "react-redux";
 export const ChatcontrolContacts = () => {
+  const contactsData = useSelector((state) => state.chat.contacts);
+  console.log(contactsData);
   return (
     <div className={styles.main}>
       <h2 className={styles.header2}>Contacts</h2>
       <div className={styles.contactsWrapper}>
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
-        <Contact />
+        {contactsData.map((data) => (
+          <Contact
+            name={data.name}
+            lastMessage={data.lastMessage}
+            id={data.id}
+            key={data.id}
+          />
+        ))}
       </div>
     </div>
   );

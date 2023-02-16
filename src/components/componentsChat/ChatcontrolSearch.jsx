@@ -19,8 +19,8 @@ export const ChatcontrolSearch = () => {
       <div className={styles.resultWrapper}>
         <h4>Results:</h4>
         <div className={styles.resultUnitsWrapper}>
-          {units.map((x) => (
-            <div className={styles.resultUnit}>
+          {units.map((x, index) => (
+            <div className={styles.resultUnit} key={index}>
               <h2>Name</h2>
               <img className={styles.imageContact} src={img} alt="Avatar" />
               <button>+</button>
