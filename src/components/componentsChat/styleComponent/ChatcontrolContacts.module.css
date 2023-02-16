@@ -14,7 +14,6 @@
 .contactsWrapper {
   position: relative;
   overflow-y: scroll;
-  display: grid;
   width: 100%;
   height: calc(80px * 5);
   justify-items: center;

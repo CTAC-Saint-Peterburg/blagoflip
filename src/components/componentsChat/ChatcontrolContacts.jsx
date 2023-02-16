@@ -8,14 +8,16 @@ export const ChatcontrolContacts = () => {
     <div className={styles.main}>
       <h2 className={styles.header2}>Contacts</h2>
       <div className={styles.contactsWrapper}>
-        {contactsData.map((data) => (
-          <Contact
-            name={data.name}
-            lastMessage={data.lastMessage}
-            id={data.id}
-            key={data.id}
-          />
-        ))}
+        {contactsData
+          .map((data) => (
+            <Contact
+              name={data.name}
+              lastMessage={data.lastMessage}
+              id={data.id}
+              key={data.id}
+            />
+          ))
+          .reverse()}
       </div>
     </div>
   );
