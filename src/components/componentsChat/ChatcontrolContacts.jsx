@@ -15,6 +15,7 @@ export const ChatcontrolContacts = () => {
               lastMessage={data.lastMessage}
               id={data.id}
               key={data.id}
+              messages={data.messages}
             />
           ))
           .reverse()}

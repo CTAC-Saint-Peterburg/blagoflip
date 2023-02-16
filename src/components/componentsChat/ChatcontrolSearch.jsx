@@ -7,10 +7,10 @@ export const ChatcontrolSearch = () => {
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState("");
   const [units, setUnits] = useState([
-    { name: "kek", id: 1 },
-    { name: "stas", id: 1132 },
-    { name: "kok", id: 12131 },
-    { name: "fif", id: 11392 },
+    { name: "kek", id: 1, messages: [] },
+    { name: "stas", id: 1132, messages: [] },
+    { name: "kok", id: 12131, messages: [] },
+    { name: "fif", id: 11392, messages: [] },
   ]);
   return (
     <div className={styles.main}>
@@ -41,6 +41,7 @@ export const ChatcontrolSearch = () => {
                         name: x.name,
                         lastMessage: "last message",
                         id: Math.floor(Math.random() * 9999),
+                        messages: x.messages,
                       })
                     )
                   }

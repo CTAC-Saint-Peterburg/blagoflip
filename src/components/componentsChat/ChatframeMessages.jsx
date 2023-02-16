@@ -1,7 +1,7 @@
 import styles from "./styleComponent/ChatframeMessages.module.css";
 import { useSelector } from "react-redux";
 export const ChatframeMessages = () => {
-  const msg = useSelector((state) => state.chat.messages);
+  const msg = useSelector((state) => state.chat.activeMessages.msg);
 
   return (
     <div className={styles.main}>
