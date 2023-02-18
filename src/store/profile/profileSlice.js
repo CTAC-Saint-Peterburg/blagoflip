@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const profileSlice = createSlice({
   name: "profile",
   initialState: {
-    data: { name: "Unnamed", id: "1", winrate: 33 },
+    data: { name: "Unnamed", id: "1", winrate: 33, signInStatus: false },
     history: [
       { id: 9, opponent: "kek", bet: 100 },
       { id: 13, opponent: "GigaHru", bet: 50 },
@@ -12,6 +12,9 @@ export const profileSlice = createSlice({
     alert: { visibility: false, text: "undefined" },
   },
   reducers: {
+    setSignInStatus: (state) => {
+      state.data.signInStatus = !state.data.signInStatus;
+    },
     addToHistory: (state, action) => {
       state.history.push(action.payload);
     },
@@ -26,6 +29,11 @@ export const profileSlice = createSlice({
     },
   },
 });
-export const { addToHistory, setVisibility, setText, setNewName } =
-  profileSlice.actions;
+export const {
+  addToHistory,
+  setVisibility,
+  setText,
+  setNewName,
+  setSignInStatus,
+} = profileSlice.actions;
 export default profileSlice.reducer;
